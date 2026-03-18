@@ -23,17 +23,10 @@ Folders named like `archive*` (for example `archive`, `archive-v1`, `archive-202
 Do not use archive-folder content as implementation input when building the current version, unless the human explicitly requests it.
 Current implementation must be derived from active requirement files and active project sources only.
 
-#### Requirement coverage by automated tests
-Every project requirement must be validated by automated tests.
-If one test is not sufficient to validate a requirement, add as many automated tests as needed until the requirement is fully covered.
-
 ### Docker
 Everything must be wrapped inside docker container(s) so it can be deployed easily.
 A Makefile must contain all the necessary docker-compose commands.  
 Containers must be managed with docker-compose.
-
-### Deployment configuration boundary (strict)
-Deployment-specific values (for example domains/hosts, ingress routing, public URLs, and environment-specific endpoints) MUST be configured outside application code in deployment configuration.
 
 ### Authentication
 Requirements for "logging in" and "to register" as a user imply that there needs to be some authentication in the system. This normally also implies that there are resources that can only be accessed by the user, when he is authenticated.

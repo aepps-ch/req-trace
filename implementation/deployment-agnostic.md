@@ -1,0 +1,2 @@
+# Deployment configuration boundary
+Deployment-specific values (for example domains/hosts, ingress routing, public URLs, and environment-specific endpoints) MUST be configured outside application code in deployment configuration.

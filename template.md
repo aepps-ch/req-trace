@@ -5,12 +5,10 @@ The organization-wide implementation constraints in this file must be followed s
 This means they have to be followed for every change that is done to this project:
 [req-trace/implementation.md](req-trace/implementation.md)
 
-**Frontend Guideline**  
-This project uses the req-trace/frontend implementation guideline.
-These requirements must be followed additionally:
-[req-trace/implementation/frontend.md](req-trace/implementation/frontend.md)
-
-**Backend Guideline**  
-This project uses the req-trace/backend implementation guideline.
-These requirements must be followed additionally:
-[req-trace/implementation/backend.md](req-trace/implementation/backend.md)
+**Additional Guidelines**
+This project follows the following guidelines. The corresponding requirements have to be followed additionally.  
+These are the filenames. You can find the requirements inside the .md-suffixed files inside the implementation-folder.  
+Don't apply guidelines, that aren't listed here!  
+ - frontend
+ - backend
+ - deployment-agnostic
