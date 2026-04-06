@@ -13,7 +13,11 @@ Any change in this project must be reflected in a new version-delta. Even if it 
 For every new revision of the project requirements, create a new `requirements/project.v{N+1}.md` file containing the requirement delta only.
 Do not rewrite or mutate older version files after they are created.
 The effective requirements are distributed across the ordered delta history (`requirements/project.v1.md` ... `requirements/project.vN.md`), so one cannot derive the full requirement state from only the newest file.
-Implementation must therefore consider all revisions up to the highest version.  
+Implementation must therefore consider all revisions up to the highest version.
+
+> **Non-negotiable:** every change (feature, bug fix, refactor) must comply with the entire effective requirements set — i.e. the union of _all_ `requirements/project.v*.md` files up to the latest version.
+> Never scope your work based solely on the newest delta; always cross-check the complete history before making changes.
+> New code must be re-checked against all applicable rules after each change, and refined iteratively until every requirement is satisfied.
 
 #### Content rules
 If you are instructed to create or change this project you have to apply the words to project.vN.md exactly as they were given to you. Content inside project.vN.md can only be one-to-one the things you were instructed. You are not allowed to change or complement the project-requirements or to merge things from the organization-requirements into them.
