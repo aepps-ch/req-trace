@@ -21,3 +21,4 @@ Don't apply guidelines, that aren't listed here!
  - frontend
  - backend
  - deployment-agnostic
+ - codestyle
