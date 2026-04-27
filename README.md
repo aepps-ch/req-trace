@@ -4,39 +4,47 @@
 
 <sub>Mascot icon: OpenMoji (CC BY-SA 4.0)</sub>
 
-A lightweight **requirements operating system** for AI-assisted project work.
+A lightweight **specification operating system** for AI-assisted project work.
 
-Instead of repeating long setup prompts in every project, keep `req-trace/` as a stable submodule and evolve requirements in your project as versioned deltas.
+Instead of repeating long setup prompts in every project, keep `req-trace/` as a stable submodule and evolve your project specification as versioned spec deltas.
 
-> `req-trace` is the shared rulebook; your project owns the requirements history.
+> `req-trace` is the shared rulebook; your project owns the specification history.
 
 ## What this is (and isn't)
 - ✅ **Is:** shared process + constraints (`req-trace/`) reused across projects
-- ✅ **Is:** a versioned requirements flow (`requirements/project.vN.md`)
+- ✅ **Is:** a versioned specification flow (`spec-deltas/vN-short-description.md`)
 - ❌ **Is not:** a one-off template to copy once and forget
 
 ## Files
-- `requirements.md` — guideline for drafting initial project requirements (`requirements/project.v1.md`)
-- `implementation.md` — organization-wide implementation constraints (shared)
+- `implementation.md` — organization-wide implementation constraints and project specification rules (shared)
 - `instructions.md` — prompt/workflow shortcuts
 - `template.md` — integration note (submodule usage)
 - `openclaw.md` — OpenClaw extension for consistent req-trace application
 
-## Usage
+## Agent Flow
+These steps are meant to be done by you (the agent).
+
 1. Make sure your project is initialized as a git-repository.
 2. Keep this repository at `req-trace/` of your project
    - Recommended: pin it as a git submodule to a release branch
-   - Example add command: `git submodule add -b release/v0.3 https://github.com/trace-code-org/req-trace.git req-trace`
+   - Example add command: `git submodule add -b release/v0.6 https://github.com/trace-code-org/req-trace.git req-trace`
 3. Copy `req-trace/template.md` as `agents.md` into the root of your project.
 4. Delete the additional-guidelines from the copied agents.md that aren't mentioned explicitly mentioned in your instructions.  
 5. The newly created `agents.md` file must be followed for implementation when using the req-trace flow.
-6. Maintain **project-specific requirements** as versioned delta files in `requirements/project.vN.md`
-(see: `req-trace/implementation.md` → **Project Requirements / Versions**)
+6. Maintain the **project-specific specification** as versioned delta files in `spec-deltas/vN-short-description.md`
+(see: `req-trace/implementation.md` → **Project Specification / Versions**)
+
+## Concepts
+**Consolidation** means a human merges older spec deltas into the consolidated spec (`spec.md` or `spec/`).
+See [implementation.md](implementation.md) → **Project Specification**.
+
+**Recreation** means reimplementing the code according to the active spec.
+See [recreate.md](recreate.md).
 
 ## Example prompt for your agent
 
 ```text
-Please implement these requirements with the github.com/trace-code-org/req-trace flow:
+Please implement this specification with the github.com/trace-code-org/req-trace flow:
 - Build a web app that tracks naps for office cats 🐈
 - Start/stop nap timer per cat
 - Show daily nap leaderboard
@@ -55,14 +63,5 @@ If you are using codex directly, you should follow this: [setup](codex/codex.md)
 After this instruction, you can always tell your agent to create a project following the req-trace flow.
 If a project uses req-trace, the flow will be applied automatically.
 
-## Breaking changes
-### v0.5: extracting guidelines
-You now have to specify inside agents.md (template.md) which implementation-guidelines you wan't to use.
-
-### v0.4: project renamed
-This project was renamed from `agents-md` to `req-trace`.
-
-### v0.3: project-requirements moved
-Project requirement files now live in `requirements/` instead of the project root.
-- Old: `project.vN.md`
-- New: `requirements/project.vN.md`
+## Release Notes
+See [release-notes.md](release-notes.md) for release history and migration notes.

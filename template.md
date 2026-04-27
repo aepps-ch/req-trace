@@ -11,7 +11,7 @@ This means they have to be followed for every change that is done to this projec
 
 ---  
 
-IMPORTANT: If you are an agent and you copied this template as agent.md to the project-root. You have to remove all the additional guidelines that weren't explicitly mentioned by the human. If specific guidelines weren't mentioned at all, you have to strip this whole "additional guidelines" chapter.
+IMPORTANT: If you (the agent) copied this template as agent.md to the project-root, you have to remove all the additional guidelines that weren't explicitly mentioned by the human. If specific guidelines weren't mentioned at all, you have to strip this whole "additional guidelines" chapter.
 
 ---
 

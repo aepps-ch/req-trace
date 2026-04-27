@@ -1,5 +1,5 @@
 # Frontend Implementation
-If requirements don't mention how something should be achievable with the specified system, it means that it must be achievable by the user via frontend.
+If the project specification doesn't mention how something should be achievable with the specified system, it means that it must be achievable by the user via frontend.
 
 #### Technologies
 Typescript, React, React-Relay, Tailwind
