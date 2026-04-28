@@ -1,4 +1,4 @@
-# req-trace (formerly agents-md)
+# req-trace
 
 <img src="https://openmoji.org/data/color/svg/1F99E.svg" alt="lobster mascot" align="right" width="110" />
 
