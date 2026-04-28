@@ -17,6 +17,12 @@ The initial project specification template was removed.
 - Old: `req-trace/requirements.md`
 - New: no template file; create the first delta directly in `spec-deltas/`
 
+The shared rules file and optional guideline folder were renamed.
+- Old: `req-trace/implementation.md`
+- New: `req-trace/rules.md`
+- Old: `req-trace/implementation/`
+- New: `req-trace/rules/`
+
 ### Changes
 Projects may start with only spec deltas, but a human can consolidate them over time.
 The consolidated effective spec can be stored in either:
@@ -33,13 +39,14 @@ When the human only approves your suggestion (you, the agent) with a trigger pro
 ### Migration From v0.5
 1. Rename `requirements/` to `spec-deltas/`.
 2. Rename existing `project.vN.md` files to `vN-short-description.md` inside `spec-deltas/`.
-3. If the project already has a consolidated specification document, move it to `spec.md` or split it into files under `spec/`.
-4. Update local documentation, scripts, and agent instructions that reference `requirements/project.vN.md` so they reference `spec-deltas/vN-short-description.md`.
-5. Remove references to `req-trace/requirements.md`.
-6. Read `spec.md` or `spec/` first when it exists, then apply the remaining unconsolidated deltas.
+3. Update local documentation, scripts, and agent instructions that reference `requirements/project.vN.md` so they reference `spec-deltas/vN-short-description.md`.
+4. Remove references to `req-trace/requirements.md`.
+5. Update project `agents.md` references from `req-trace/implementation.md` to `req-trace/rules.md`.
+6. Update references to optional guideline files from `req-trace/implementation/` to `req-trace/rules/`.
+7. Review scripts, documentation, and agent instructions for old path references.
 
 ## v0.5: extracting guidelines
-You now have to specify inside agents.md (template.md) which implementation-guidelines you wan't to use.
+You now have to specify inside agents.md (template.md) which rule modules you want to use.
 
 ## v0.4: project renamed
 This project was renamed from `agents-md` to `req-trace`.

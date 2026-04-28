@@ -1,6 +1,6 @@
 ---
 name: req-trace
-description: Apply the req-trace workflow in programming projects. Use when a user asks to use "req-trace flow". It is very important that if you edit any project that is using the req-trace flow, you have to follow its `agents.md` file. In such projects, this normally means you have to follow `req-trace/implementation.md` strictly. You can detect projects using the req-trace flow when they contain a folder or a git submodule named `req-trace`.
+description: Apply the req-trace workflow in programming projects. Use when a user asks to use "req-trace flow". It is very important that if you edit any project that is using the req-trace flow, you have to follow its `agents.md` file. In such projects, this normally means you have to follow `req-trace/rules.md` strictly. You can detect projects using the req-trace flow when they contain a folder or a git submodule named `req-trace`.
 ---
 
 req-trace repository: https://github.com/trace-code-org/req-trace  

@@ -16,7 +16,8 @@ Instead of repeating long setup prompts in every project, keep `req-trace/` as a
 - ❌ **Is not:** a one-off template to copy once and forget
 
 ## Files
-- `implementation.md` — organization-wide implementation constraints and project specification rules (shared)
+- `rules.md` — organization-wide project rules and project specification rules (shared)
+- `rules/` — optional rule modules for additional guidelines
 - `instructions.md` — prompt/workflow shortcuts
 - `template.md` — integration note (submodule usage)
 - `openclaw.md` — OpenClaw extension for consistent req-trace application
@@ -32,11 +33,11 @@ These steps are meant to be done by you (the agent).
 4. Delete the additional-guidelines from the copied agents.md that aren't mentioned explicitly mentioned in your instructions.  
 5. The newly created `agents.md` file must be followed for implementation when using the req-trace flow.
 6. Maintain the **project-specific specification** as versioned delta files in `spec-deltas/vN-short-description.md`
-(see: `req-trace/implementation.md` → **Project Specification / Versions**)
+(see: `req-trace/rules.md` → **Project Specification / Versions**)
 
 ## Concepts
 **Consolidation** means a human merges older spec deltas into the consolidated spec (`spec.md` or `spec/`).
-See [implementation.md](implementation.md) → **Project Specification**.
+See [rules.md](rules.md) → **Project Specification**.
 
 **Recreation** means reimplementing the code according to the active spec.
 See [recreate.md](recreate.md).
