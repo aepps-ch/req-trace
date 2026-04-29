@@ -36,6 +36,16 @@ Spec deltas are only required for durable specification changes.
 Relative implementation instructions such as "change this in that way" do not need their own delta.
 When the human only approves your suggestion (you, the agent) with a trigger prompt such as "please", the delta must contain a minimal summary of the suggested specification change instead of the trigger prompt.
 
+Projects can contain nested specification scopes.
+Any subpackage directory with `spec.md`, `spec/`, or `spec-deltas/` has specification that agents must implement for that directory tree.
+
+For files inside a subpackage, agents must read and implement the project root specification first and then each containing subpackage specification from parent to child.
+Child scope specification overrides parent scope specification only inside the child tree.
+
+When agents add durable spec deltas while editing inside a child scope, scope-specific content must be written into that scope's `spec-deltas/`.
+Parent-scope content must stay in the parent scope.
+If the split between scopes is unclear, the agent must ask the human before writing the spec delta.
+
 ### Migration From v0.5
 1. Rename `requirements/` to `spec-deltas/`.
 2. Rename existing `project.vN.md` files to `vN-short-description.md` inside `spec-deltas/`.

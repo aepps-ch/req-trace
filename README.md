@@ -13,6 +13,7 @@ Instead of repeating long setup prompts in every project, keep `req-trace/` as a
 ## What this is (and isn't)
 - ✅ **Is:** shared process + constraints (`req-trace/`) reused across projects
 - ✅ **Is:** a versioned specification flow (`spec-deltas/vN-short-description.md`)
+- ✅ **Is:** a path-scoped specification system for projects with subpackages
 - ❌ **Is not:** a one-off template to copy once and forget
 
 ## Files
@@ -26,14 +27,11 @@ Instead of repeating long setup prompts in every project, keep `req-trace/` as a
 These steps are meant to be done by you (the agent).
 
 1. Make sure your project is initialized as a git-repository.
-2. Keep this repository at `req-trace/` of your project
-   - Recommended: pin it as a git submodule to a release branch
-   - Example add command: `git submodule add -b release/v0.6 https://github.com/trace-code-org/req-trace.git req-trace`
+2. Keep this repository according to [rules.md](rules.md) → **req-trace Setup**.
 3. Copy `req-trace/template.md` as `agents.md` into the root of your project.
 4. Delete the additional-guidelines from the copied agents.md that aren't mentioned explicitly mentioned in your instructions.  
 5. The newly created `agents.md` file must be followed for implementation when using the req-trace flow.
-6. Maintain the **project-specific specification** as versioned delta files in `spec-deltas/vN-short-description.md`
-(see: `req-trace/rules.md` → **Project Specification / Versions**)
+6. Maintain the project specification according to [rules.md](rules.md) → **Project Specification**.
 
 ## Concepts
 **Consolidation** means a human merges older spec deltas into the consolidated spec (`spec.md` or `spec/`).
