@@ -23,3 +23,4 @@ Don't apply guidelines, that aren't listed here!
  - deployment-agnostic
  - codestyle
  - docker
+ - autodeploy
