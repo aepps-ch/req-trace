@@ -43,7 +43,7 @@ See [recreate.md](recreate.md).
 ## Example prompt for your agent
 
 ```text
-Please implement this specification with the github.com/trace-code-org/req-trace flow:
+Please implement this specification with the github.com/aepps-ch/req-trace flow:
 - Build a web app that tracks naps for office cats 🐈
 - Start/stop nap timer per cat
 - Show daily nap leaderboard
@@ -54,7 +54,7 @@ Please implement this specification with the github.com/trace-code-org/req-trace
 If you are using an agent (like open-claw or codex) and want to use req-trace for your projects, tell your agent this:
 
 **Generic:**  
-> Please install the req-trace skill from `github.com/trace-code-org/req-trace`. 
+> Please install the req-trace skill from `github.com/aepps-ch/req-trace`. 
 
 **Codex:**  
 If you are using codex directly, you should follow this: [setup](codex/codex.md)

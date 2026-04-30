@@ -10,7 +10,7 @@ Updates can include breaking changes and migration steps that must be applied to
 ## req-trace Setup
 Keep this repository at `req-trace/` of your project.
 Recommended: pin it as a git submodule to a release branch.
-Example add command: `git submodule add -b release/v0.6 https://github.com/trace-code-org/req-trace.git req-trace`
+Example add command: `git submodule add -b release/v0.6 https://github.com/aepps-ch/req-trace.git req-trace`
 
 ## Project Specification
 A specification scope is the project root or any subdirectory that contains `spec.md`, `spec/`, or `spec-deltas/`.
