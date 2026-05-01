@@ -69,3 +69,6 @@ Spec content that has been consolidated into `spec.md` or `spec/` should no long
 Folders named like `archive*` (for example `archive`, `archive-v1`, `archive-2026`) are historical snapshots.
 Do not use archive-folder content as implementation input when building the current version, unless the human explicitly requests it.
 Current implementation must be derived from active specification files and active project sources only.
+
+### Secure defaults
+If we there is an allow list e.g. `["READ", "WRITE"]` then a empty list `[]` should always mean nothing is allowed / no access. Empty lists should never default to everything is allowed.
