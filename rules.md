@@ -1,18 +1,22 @@
-# Organization Rules
+# req-trace Rules
 
-## Coding Style
-Strongly domain-driven and modular (colocation of what belongs together)
+## req-trace setup
 
-## req-trace Updates
-When updating `req-trace` in an existing project, always review `req-trace/release-notes.md` first.
-Updates can include breaking changes and migration steps that must be applied to the project.
-
-## req-trace Setup
+### installation
 Keep this repository at `req-trace/` of your project.
 Recommended: pin it as a git submodule to a release branch.
 Example add command: `git submodule add -b release/v0.6 https://github.com/aepps-ch/req-trace.git req-trace`
 
-## Project Specification
+### external rules
+If the agents.md file contains references to files like:  
+`req-trace/modules/[foohub.com]/[org]/[repo]/[path]`  
+You have to search for the file/folder on the origin-repo without the `req-trace/modules/` prefix and copy them into the `req-trace/modules` folder so it can be accessed more easily on the local machine.
+
+### updates
+When updating `req-trace` in an existing project, always review `req-trace/release-notes.md` first.
+Updates can include breaking changes and migration steps that must be applied to the project.
+
+## Project specification
 A specification scope is the project root or any subdirectory that contains `spec.md`, `spec/`, or `spec-deltas/`.
 Each scope can contain:
 - a consolidated specification in `spec.md` or `spec/`
@@ -21,7 +25,7 @@ Each scope can contain:
 The consolidated specification may be absent. New scopes normally start with only `spec-deltas/`.
 All specification must be followed as long as it does not contradict the organization rules.
 
-### Effective Specification
+### Effective specification
 For each changed file, collect every specification scope from the project root down to the deepest containing scope.
 Read scopes from parent to child.
 Within each scope, read the consolidated specification first if present, then all remaining unconsolidated `spec-deltas/v*.md` files in version order.

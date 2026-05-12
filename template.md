@@ -1,26 +1,10 @@
-If the req-trace submodule (git) is not initialized yet. This has to be done as a first step:
+If the req-trace submodule is not initialized yet. Initialize it first:
 `git submodule update --init req-trace`.
 
-The organization-wide project rules in this file must be followed strictly.
-This means they have to be followed for every change that is done to this project:
-[req-trace/rules.md](req-trace/rules.md)
+### Rules
 
+**Important:** Apply every rule that is mentioned and referenced here strictly to every change in this project.  
 
-
-**Additional Guidelines**  
-
----  
-
-IMPORTANT: If you (the agent) copied this template as agent.md to the project-root, you have to remove all the additional guidelines that weren't explicitly mentioned by the human. If specific guidelines weren't mentioned at all, you have to strip this whole "additional guidelines" chapter.
-
----
-
-This project follows the following guidelines. The corresponding requirements have to be followed additionally.  
-These are the filenames. You can find the requirements inside the .md-suffixed files inside the `rules/` folder.  
-Don't apply guidelines, that aren't listed here!  
- - frontend
- - backend
- - deployment-agnostic
- - codestyle
- - docker
- - autodeploy
+ - req-trace/rules.md
+ - placeholder-project-rules.md
+ - req-trace/modules/foohub.com/bar-org/dummy-repo/example-path.md

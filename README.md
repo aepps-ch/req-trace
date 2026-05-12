@@ -4,7 +4,7 @@
 
 <sub>Mascot icon: OpenMoji (CC BY-SA 4.0)</sub>
 
-A lightweight **specification operating system** for AI-assisted project work.
+A lightweight **specification framework** for AI-assisted project work.
 
 Instead of repeating long setup prompts in every project, keep `req-trace/` as a stable submodule and evolve your project specification as versioned spec deltas.
 
