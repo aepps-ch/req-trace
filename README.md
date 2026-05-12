@@ -17,25 +17,24 @@ Instead of repeating long setup prompts in every project, keep `req-trace/` as a
 - ❌ **Is not:** a one-off template to copy once and forget
 
 ## Files
-- `rules.md` — organization-wide project rules and project specification rules (shared)
-- `rules/` — optional rule modules for additional guidelines
+- `rules.md` — req-trace rules and project specification rules
+- `modules/` — local cache for external rule modules referenced by `agents.md`
 - `instructions.md` — prompt/workflow shortcuts
 - `template.md` — integration note (submodule usage)
-- `openclaw.md` — OpenClaw extension for consistent req-trace application
 
-## Agent Flow
+## Usage
 These steps are meant to be done by you (the agent).
 
 1. Make sure your project is initialized as a git-repository.
-2. Keep this repository according to [rules.md](rules.md) → **req-trace Setup**.
+2. Keep this repository according to [rules.md](rules.md) -> **req-trace setup**.
 3. Copy `req-trace/template.md` as `agents.md` into the root of your project.
-4. Delete the additional-guidelines from the copied agents.md that aren't mentioned explicitly mentioned in your instructions.  
+4. Configure the rule references in `agents.md` according to [rules.md](rules.md) -> **external rules**.
 5. The newly created `agents.md` file must be followed for implementation when using the req-trace flow.
-6. Maintain the project specification according to [rules.md](rules.md) → **Project Specification**.
+6. Maintain the project specification according to [rules.md](rules.md) -> **Project specification**.
 
 ## Concepts
 **Consolidation** means a human merges older spec deltas into the consolidated spec (`spec.md` or `spec/`).
-See [rules.md](rules.md) → **Project Specification**.
+See [rules.md](rules.md) -> **Project specification**.
 
 **Recreation** means reimplementing the code according to the active spec.
 See [recreate.md](recreate.md).

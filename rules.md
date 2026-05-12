@@ -5,7 +5,7 @@
 ### installation
 Keep this repository at `req-trace/` of your project.
 Recommended: pin it as a git submodule to a release branch.
-Example add command: `git submodule add -b release/v0.6 https://github.com/aepps-ch/req-trace.git req-trace`
+Example add command: `git submodule add -b release/v0.7 https://github.com/aepps-ch/req-trace.git req-trace`
 
 ### external rules
 If the agents.md file contains references to files like:  
@@ -23,7 +23,7 @@ Each scope can contain:
 - versioned specification deltas in `spec-deltas/vN-short-description.md`
 
 The consolidated specification may be absent. New scopes normally start with only `spec-deltas/`.
-All specification must be followed as long as it does not contradict the organization rules.
+All specification must be followed as long as it does not contradict the applicable rules.
 
 ### Effective specification
 For each changed file, collect every specification scope from the project root down to the deepest containing scope.
@@ -54,7 +54,7 @@ If it is not clear how to split the requested content between scopes, ask the hu
 ### Delta Content
 If you are instructed to create or change the specification, apply the human's words to the relevant `spec-deltas/vN-short-description.md` exactly as they were given to you.
 Content inside `vN-short-description.md` can only be one-to-one the things you were instructed.
-You are not allowed to change or complement the specification or to merge things from the organization rules into it.
+You are not allowed to change or complement the specification or to merge things from the applicable rules into it.
 
 Exception: when the human approves your suggestion (you, the agent) with a trigger prompt such as "please", "yes", "do that", or similar, the trigger prompt must not be copied into the spec delta.
 In that case, replace the trigger prompt with a minimal summary of the concrete specification change you suggested.
